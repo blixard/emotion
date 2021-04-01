@@ -1,0 +1,9 @@
+{% extends 'tracevideo/layout.html'%}
+{%block body%}
+     {% for video in videos %}
+<b>{{video.title}} {{video.video.url}}</b>
+     <video width="500" height="500" controls >
+     <source src="{{video.video.url}}" type="video/mp4">
+     </video>
+     {%endfor%}
+{%endblock%}

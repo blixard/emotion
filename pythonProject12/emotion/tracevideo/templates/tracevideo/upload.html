@@ -1,0 +1,11 @@
+{% extends 'tracevideo/layout.html'%}
+{%block body%}
+     <div id='backend_upload'>
+    <form action="{% url 'emotion:upload' %}" method="post"
+          enctype="multipart/form-data">
+      {% csrf_token %}
+      {{form}}
+      <input type="submit" value="Upload">
+    </form>
+  </div>
+{%endblock%}
